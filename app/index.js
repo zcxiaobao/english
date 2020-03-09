@@ -29,6 +29,6 @@ app.use(error({
 app.use(bodyparser())
 app.use(parameter(app))
 routing(app)
-app.listen(3000,'0.0.0.0', () => {
-  console.log('服务器启动于3000端口')
+app.listen(8000, () => {
+  console.log('服务器启动于8000端口')
 })
