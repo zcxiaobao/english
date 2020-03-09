@@ -20,9 +20,9 @@ const parameter = require('koa-parameter')
 // mongoose.connect(connectionStr, { useNewUrlParser: true,useUnifiedTopology: true }, () => {
 //   console.log('mongoose连接成功')
 // })
-mongoose.connection.on('error', (e) => {
-  console.log(e)
-})
+// mongoose.connection.on('error', (e) => {
+//   console.log(e)
+// })
 app.use(error({
   // postFormat: (e, {stack, ...rest}) => process.env.NODE_ENV === 'production'? rest: {stack, ...rest}
 }))
