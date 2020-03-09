@@ -2,10 +2,10 @@ const Koa = require('koa')
 const bodyparser = require('koa-bodyparser')
 const error = require('koa-json-error')
 const app = new Koa()
-const mongoose = require('mongoose')
+// const mongoose = require('mongoose')
 const routing = require('./routes')
 const parameter = require('koa-parameter')
-const {connectionStr} = require('./config')
+// const {connectionStr} = require('./config')
 // 自写错误处理中间件 无法捕捉404 Not Found
 // app.use(async (ctx, next) => {
 //   try {
@@ -17,9 +17,9 @@ const {connectionStr} = require('./config')
 //     }
 //   }
 // })
-mongoose.connect(connectionStr, { useNewUrlParser: true,useUnifiedTopology: true }, () => {
-  console.log('mongoose连接成功')
-})
+// mongoose.connect(connectionStr, { useNewUrlParser: true,useUnifiedTopology: true }, () => {
+//   console.log('mongoose连接成功')
+// })
 mongoose.connection.on('error', (e) => {
   console.log(e)
 })
